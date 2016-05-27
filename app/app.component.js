@@ -23,7 +23,7 @@ var AppComponent = (function () {
         console.log("App");
     }
     AppComponent.prototype.ngOnInit = function () {
-        this.router.navigate(['/home'], this);
+        this.router.navigate(['/home']);
     };
     AppComponent = __decorate([
         core_1.Component({

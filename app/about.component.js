@@ -19,7 +19,7 @@ var AboutComponent = (function () {
         console.log("About");
     }
     AboutComponent.prototype.ngOnInit = function () {
-        this.router.navigate(['/about'], this);
+        this.router.navigate(['/about']);
     };
     AboutComponent = __decorate([
         core_1.Component({

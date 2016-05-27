@@ -2,7 +2,7 @@
  * Startpunkt der App
  **/
 
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Routes, Router, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router';
 
 import { NavComponent } from './nav.component';
@@ -39,6 +39,6 @@ export class AppComponent implements OnInit {
 	}
 	
 	ngOnInit() {
-		this.router.navigate(['/home'], this);
+		this.router.navigate(['/home']);
 	}
 }

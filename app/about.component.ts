@@ -17,6 +17,6 @@ export class AboutComponent implements OnInit {
 	}
 	
 	ngOnInit() {
-		this.router.navigate(['/about'], this);
+		this.router.navigate(['/about']);
 	}
 }
