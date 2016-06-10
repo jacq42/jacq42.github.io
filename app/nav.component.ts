@@ -38,5 +38,5 @@ export class NavComponent implements OnInit {
 export var NAVITEMS: NavItem[] = [
 	  { "style": "active", "title": "Home", "routerLink" : ['/home'] },
 	  { "style": "", "title": "About", "routerLink" : ['/about'] },
-	  { "style": "", "title": "Xxx", "routerLink" : ['/xxx'] }
+	  { "style": "", "title": "Offtopic", "routerLink" : ['/offtopic'] }
 ];

@@ -1,1 +1,15 @@
-<p class="lead">Demn&auml;chst hier ...</p>
+<div class="col-md-3">
+	<ul class="list-group text-left">
+		<li *ngFor="let blockentry of blockentries"
+			(click)="onSelect(blockentry)" 
+			class="list-group-item">
+			{{blockentry.title}}
+		</li>
+	</ul>
+</div>
+
+<div class="col-md-9">		
+	<div *ngIf="selectedBlockentry" class="text-left">
+		<blockentry-detail [blockentry]="selectedBlockentry"></blockentry-detail>
+	</div>
+</div>

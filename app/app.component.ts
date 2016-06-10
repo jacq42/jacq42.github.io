@@ -8,7 +8,7 @@ import { Routes, Router, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/ro
 import { NavComponent } from './nav.component';
 import { HomeComponent } from './home.component';
 import { AboutComponent } from './about.component';
-import { XxxComponent } from './xxx.component';
+import { OfftopicComponent } from './Offtopic.component';
 
 @Component({
 	selector: 'codeblock',
@@ -17,6 +17,9 @@ import { XxxComponent } from './xxx.component';
 	providers: [ROUTER_PROVIDERS]
 })
 
+/**
+ * Navigation
+ */
 @Routes([
 	{
 		path: '/home',
@@ -27,8 +30,8 @@ import { XxxComponent } from './xxx.component';
     	component: AboutComponent
     },
     {
-    	path: '/xxx',
-    	component: XxxComponent
+    	path: '/offtopic',
+    	component: OfftopicComponent
     }
 ])
 

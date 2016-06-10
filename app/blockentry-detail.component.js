@@ -1,6 +1,6 @@
 /**
- * About
- **/
+ * Ansicht f�r einen Blockeintrag
+ */
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -12,23 +12,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var AboutComponent = (function () {
-    function AboutComponent(router) {
-        this.router = router;
-        console.log("About");
+var blockentry_1 = require('./blockentry');
+var BlockentryDetailComponent = (function () {
+    function BlockentryDetailComponent() {
     }
-    AboutComponent.prototype.ngOnInit = function () {
-        this.router.navigate(['/about']);
-    };
-    AboutComponent = __decorate([
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', blockentry_1.Blockentry)
+    ], BlockentryDetailComponent.prototype, "blockentry", void 0);
+    BlockentryDetailComponent = __decorate([
         core_1.Component({
-            selector: 'about',
-            templateUrl: 'html/about.html'
+            selector: 'blockentry-detail',
+            templateUrl: 'html/blockentry.html',
+            styleUrls: ['css/blockentry.css']
         }), 
-        __metadata('design:paramtypes', [router_1.Router])
-    ], AboutComponent);
-    return AboutComponent;
+        __metadata('design:paramtypes', [])
+    ], BlockentryDetailComponent);
+    return BlockentryDetailComponent;
 }());
-exports.AboutComponent = AboutComponent;
-//# sourceMappingURL=about.component.js.map
+exports.BlockentryDetailComponent = BlockentryDetailComponent;
+//# sourceMappingURL=blockentry-detail.component.js.map

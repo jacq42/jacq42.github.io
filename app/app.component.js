@@ -16,7 +16,7 @@ var router_1 = require('@angular/router');
 var nav_component_1 = require('./nav.component');
 var home_component_1 = require('./home.component');
 var about_component_1 = require('./about.component');
-var xxx_component_1 = require('./xxx.component');
+var Offtopic_component_1 = require('./Offtopic.component');
 var AppComponent = (function () {
     function AppComponent(router) {
         this.router = router;
@@ -42,8 +42,8 @@ var AppComponent = (function () {
                 component: about_component_1.AboutComponent
             },
             {
-                path: '/xxx',
-                component: xxx_component_1.XxxComponent
+                path: '/offtopic',
+                component: Offtopic_component_1.OfftopicComponent
             }
         ]), 
         __metadata('design:paramtypes', [router_1.Router])
