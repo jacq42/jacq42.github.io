@@ -42,6 +42,14 @@
     <script>
     	System.import('app').catch(function(err){ console.error(err); });
     </script>
+    
+    <!-- Google APIs -->
+    <script src="http://crypto-js.googlecode.com/files/2.5.3-crypto-sha1-hmac-pbkdf2-blockmodes-aes.js"></script>
+	<script>
+		function decryptString(msg, secret) {
+			location.href = Crypto.AES.decrypt(msg, secret);
+		}		
+	</script>
   </head>
 
   <body>

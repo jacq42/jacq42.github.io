@@ -25,12 +25,19 @@ var HomeComponent = (function () {
         this.router.navigate(['/home']);
         this.getBlockentries();
     };
+    HomeComponent.prototype.setBlockentries = function (blockentries) {
+        this.blockentries = blockentries;
+        // TODO nur setzen, wenn noch kein Wert vorhanden ist -> sollte auch bei Seitenwechsel erhalten bleiben
+        if (this.selectedBlockentry == null || this.selectedBlockentry === 'undefined') {
+            this.selectedBlockentry = blockentries[0];
+        }
+    };
     /**
      * Holen aller Blockeintr�ge aus dem Service
      */
     HomeComponent.prototype.getBlockentries = function () {
         var _this = this;
-        this.blockentryService.getBlockentries().then(function (blockentries) { return _this.blockentries = blockentries; });
+        this.blockentryService.getBlockentries().then(function (blockentries) { return _this.setBlockentries(blockentries); });
     };
     HomeComponent.prototype.onSelect = function (blockentry) {
         this.selectedBlockentry = blockentry;

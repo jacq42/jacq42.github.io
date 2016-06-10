@@ -31,11 +31,19 @@ export class HomeComponent implements OnInit {
 		this.getBlockentries();
 	}
 	
+	setBlockentries(blockentries: Blockentry[]) {
+		this.blockentries = blockentries
+		// TODO nur setzen, wenn noch kein Wert vorhanden ist -> sollte auch bei Seitenwechsel erhalten bleiben
+		if(this.selectedBlockentry == null || this.selectedBlockentry === 'undefined') {
+			this.selectedBlockentry = blockentries[0];
+		}
+	}
+	
 	/**
 	 * Holen aller Blockeinträge aus dem Service
 	 */
 	getBlockentries() {
-		this.blockentryService.getBlockentries().then(blockentries => this.blockentries = blockentries);
+		this.blockentryService.getBlockentries().then(blockentries => this.setBlockentries(blockentries));
 	}
 	
 	onSelect(blockentry: Blockentry) {
