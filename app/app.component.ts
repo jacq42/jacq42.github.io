@@ -8,7 +8,7 @@ import { Routes, Router, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/ro
 import { NavComponent } from './nav.component';
 import { HomeComponent } from './home.component';
 import { AboutComponent } from './about.component';
-import { OfftopicComponent } from './Offtopic.component';
+import { OfftopicComponent } from './offtopic.component';
 
 @Component({
 	selector: 'codeblock',
