@@ -4,6 +4,7 @@
 
 import { Injectable } from '@angular/core';
 
+import { Blockentry } from './blockentry';
 import { BLOCKENTRIES } from './mock-blockentries';
 
 @Injectable()

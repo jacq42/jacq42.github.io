@@ -31,4 +31,4 @@ var OfftopicComponent = (function () {
     return OfftopicComponent;
 }());
 exports.OfftopicComponent = OfftopicComponent;
-//# sourceMappingURL=Offtopic.component.js.map
+//# sourceMappingURL=offtopic.component.js.map
