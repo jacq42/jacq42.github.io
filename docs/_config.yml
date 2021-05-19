@@ -36,6 +36,9 @@ plugins:
 include: ["_pages"]
 exclude: [README.md, Gemfile, Gemfile.lock]
 
+# Wenn Anzeige von Postanfängen, dann nächste Zeile auskommentieren
+# show_excerpts: true
+
 header_pages:
   - _pages/categories.md
     

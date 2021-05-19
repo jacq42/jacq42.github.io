@@ -2,12 +2,13 @@
 layout: post
 title:  "Die Liste"
 date:   2021-05-15 02:03:22 +0200
-categories: "dev"
+categories: [ "to be done" ]
 ---
 
 In unsortierter Reihenfolge:
 
-* Java 8 - 16
+* Entwicklungsumgebung
+* Features von Java 8 - 16
 * Kubernetes
 * Terraform
 * Helm
@@ -20,6 +21,7 @@ In unsortierter Reihenfolge:
 * BDD: Cucumber, Spock
 * Cleancode
 * doctoolchain
+* Monitoring: Kibana, Grafana, Prometheus
 * KI
 * ...
 

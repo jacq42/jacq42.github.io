@@ -1,20 +1,11 @@
 ---
 layout: post
-title:  "My first post in Jekyll"
+title:  "Installation von Jekyll"
 date:   2021-05-15 01:03:22 +0200
 categories: [ "jekyll" ]
 ---
-Dies ist der erste Post auf der Seite. Ich hoffe, es werden noch viele folgen. Die [Installation](#Installation von Jekyll) war doch recht einfach.
 
-## Wozu, weshalb, warum?
-
-An dieser Stelle sollen einige Gedanken zu verwendeten Techniken/Sprachen/Frameworks der einzelnen Projekte gesammelt werden. Am besten mit Codesnippets, um sich zum einen 
-näher mit einem Thema zu befassen oder die Ideen und Gedanken festzuhalten.
-
-Viel Spaß beim Lesen.
-
-## Installation von Jekyll
-### In der bereits existierenden github page mit lokaler Testmöglichkeit
+## In der bereits existierenden github page mit lokaler Testmöglichkeit
 
 Diese Anleitung ist den [github docs](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll) entnommen.
 
