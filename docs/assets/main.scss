@@ -1,0 +1,17 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+.category-title {
+	font-weight: 600;
+    padding-top: 25px;
+    color: rgb(126,60,0);
+    font-size: large;
+}
+
+.post-date {
+	color: grey;
+	font-size: small;
+}
