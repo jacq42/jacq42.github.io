@@ -1,11 +1,14 @@
 ---
 layout: post
-title:  "Terminal in Ubuntu konfigurieren"
-date:   2021-05-19 11:07:22 +0200
-categories: [ "ubuntu", "Entwicklungsumgebung" ]
+title:  Terminal in Ubuntu konfigurieren
+tags: [ ubuntu, IDE ]
+author: jacq42
+excerpt_separator: <!--more-->
 ---
 
 Ich arbeite gern mit der [Zsh](https://wiki.ubuntuusers.de/Zsh/) zusammen mit [Oh-My-Zsh](https://ohmyz.sh) und dem [Solarized Farbschema](https://github.com/aruhier/gnome-terminal-colors-solarized).
+
+<!--more-->
 
 ## Zsh
 

@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Installation von Jekyll"
-date:   2021-05-15 01:03:22 +0200
-categories: [ "jekyll" ]
+title:  Installation von Jekyll
+tags: [ jekyll ]
+author: jacq42
 ---
 
 ## In der bereits existierenden github page mit lokaler Testmöglichkeit
@@ -23,5 +23,14 @@ Diese Anleitung ist den [github docs](https://docs.github.com/en/pages/setting-u
 6. Seite erstellen (lassen) mit `bundle install` bzw. `bundle update`
 7. lokal testen: `bundle exec jekyll serve`
 
-
 Weitere Infos zu [Jekyll](https://jekyllrb.com/), [front matter](https://jekyllrb.com/docs/front-matter/) und dem [minima Theme](https://github.com/jekyll/minima)
+
+## Theme Type-on-Strap
+
+Dieses [Theme](https://jamstackthemes.dev/demo/theme/jekyll-type-on-strap-theme/) sieht etwas "schöner" aus, ist immernoch sehr übersichtlich und minimal gehalten. Um es zu verwenden musste ich:
+
+1. Gem im Gemfile setzen und mit `bundle update` neu bauen lassen oder remote_theme verwenden
+1. _config.yml anpassen: siehe [Github Code](https://github.com/sylhare/Type-on-Strap/blob/master/_config.yml)
+2. Die Ordnerstruktur anpassen:
+** Vorher waren die Seiten unter <code>_pages</code> angelegt, jetzt unter <code>pages</code>
+3. Front Matter der Posts anpassen
