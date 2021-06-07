@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Mediendatenbank
+title: Springboot Anwendung
 #feature-img: "assets/img/portfolio/github.png"
-img: "assets/img/portfolio/github.png"
+img: "assets/img/pixelbuddha/chemistry_256.png"
 tags: [ dev, Java, Springboot ]
 ---
 
-Dieses Projekt war eine "Fingerübung". 
+Dieses Projekt war eine "Fingerübung" und ist [hier](https://github.com/jacq42/todo-a-rest) zu finden.
 
-Ziel: Erstellen einer Springboot Anwendung zum Verwalten von TODOs. 
+**Ziel**: Erstellen einer Springboot Anwendung zum Verwalten von TODOs. 
 
-Aufgaben:
+**Aufgaben:**
 * Es gibt einen RESTController mit Endpunkten zum Erstellen, Löschen und Auflisten der TODOs
 * Es gibt eine UI, die die TODOs anzeigt und löschen kann
 * Es gibt eine Postman Collection, um die Endpunkte ansprechen zu können
 
-Gedanken zur Umsetzung:
+**Gedanken zur Umsetzung:**
 
 Backend:
 * Erstellen einer Springboot Anwendung mit dem Spring Initializer über die IDE

@@ -2,11 +2,9 @@
 layout: page
 title: About
 permalink: /about/
-feature-img: "assets/img/pexels/travel.jpeg"
+feature-img: "assets/img/jk/tanne.jpg"
 tags: [ About ]
 ---
-
-TODO: neues Headerbild verwenden
 
 An dieser Stelle sollen einige Gedanken zu verwendeten Techniken/Sprachen/Frameworks der einzelnen Projekte gesammelt werden. Am besten mit Codesnippets, um sich zum einen 
 näher mit einem Thema zu befassen oder die Ideen und Gedanken festzuhalten. Auch sollen damit die über die Jahre gesammelten Notizen jeglicher Art vereinheitlicht werden.
@@ -29,8 +27,8 @@ In unsortierter Reihenfolge:
 * ServiceMesh
 * CQRS
 * Eventsourcing
-* DDD: Context Mapping, Eventstorming
-* BDD: Cucumber, Spock
+* DDD: Bounded Context, Context Mapping, Eventstorming
+* BDD: Cucumber, Spock, JBehave
 * Cleancode
 * doctoolchain
 * Monitoring: Kibana, Grafana, Prometheus
