@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Value Object
-tags: [ DDD, java, CleanCode ]
+tags: [ DDD, Java, CleanCode ]
 author: jacq42
 excerpt_separator: <!--more-->
 #color: rgb(0, 100,100)
@@ -50,4 +50,3 @@ Vorteile:
 
 Nachteil:
 * Es entstehen mehr Klassen, die aber meist recht übersichtlich sind
-
