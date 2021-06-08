@@ -4,7 +4,7 @@ title:  "Git: Store credentials"
 tags: [ git, dev ]
 author: jacq42
 #excerpt_separator: <!--more-->
-#color: rgb(0, 100,100)
+color: rgb(200, 110, 80)
 ---
 
 ## Nutzername und Passwort für ein Repository speichern
