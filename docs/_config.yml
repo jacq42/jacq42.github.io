@@ -1,0 +1,55 @@
+baseurl: ""
+url: "https://jacq42.github.io"
+
+author: jacq42
+email: jacq42@users.noreply.github.com
+twitter_username: jaekae42
+github_username:  jacq42
+
+# THEME-SPECIFIC CONFIGURATION
+title: Gedankenpool
+description: >- # this means to ignore newlines until "baseurl:"
+  personal github page from jacq42
+avatar:                          # Empty for no avatar in navbar
+favicon: assets/favicon.ico                             # Icon displayed in the tab
+
+# Header and footer text
+header_text: Small things matter  # Change Blog header text
+header_feature_image: assets/img/jk/tanne.jpg
+footer_text: >
+  Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>. <br/>
+  Icons made by <a href="https://www.flaticon.com/authors/pixel-buddha" title="Pixel Buddha">Pixel Buddha</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+
+# Blog
+excerpt: true                                           # Or "truncate" (first 250 characters), "false" to disable
+post_navigation: true
+color_image: /assets/img/lineart.png                    # A bit transparent for color posts.
+
+# Features
+# More in the _data folder for social icons, share buttons, author and language
+# For layout customization, go to the "_sass > base" folder, and check "_variables.scss"
+katex: true                                             # Enable if using math markup
+mermaid: true                                           # Enable mermaid-js for sequence and diagrams
+google_analytics:                                       # Tracking ID, e.g. "UA-000000-01"
+cookie_consent: false                                   # To respect the usage of cookies
+disqus_shortname:                                       # Your discus shortname for comments
+cusdis_app_id:                                          # Your cusdis data-app-id
+color_theme: auto                                       # auto, dark or light
+
+# PAGINATION
+paginate: 5
+paginate_path: "/blog/page:num"
+
+# PORTFOLIO
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:name
+
+
+# BUILD SETTINGS
+plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
+exclude: [".jekyll-cache", ".idea", "vendor/*", "assets/node_modules/*"]
+
+# theme: type-on-strap                                  # if using the theme as a jekyll theme gem
+remote_theme: sylhare/Type-on-Strap                     # If using as a remote_theme in github
