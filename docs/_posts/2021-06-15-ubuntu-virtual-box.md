@@ -49,6 +49,14 @@ Neuen Wert eintragen:
 Nach Neustart der Maschine kann man sich mit `ssh -p 2222 <user>@127.0.0.1` verbinden.\
 Wenn es nicht möglich ist, dann auf der VM prüfen, ob ssh richtig konfiguriert ist. Unter Ubuntu muss u.U. noch `openssh-server` installiert werden.
 
+## SSH ohne Port Forwarding
+
+Voraussetzung: VM ist ausgeschaltet
+
+Im Hauptfenster zur VM navigieren und "Ändern" auswählen: Netzwerk > Adapter 2 > Host-only Adapter
+
+Dieser muss vorher unter Datei > Host-only Netzwerk-Manager konfiguriert werden
+
 ## Maus gefangen
 
 Wenn man es geschafft hat, das VirtualBox die Maus gefangen hat und nicht wieder hergeben will: rechte STRG Taste drücken (sollte rechts unten am Fenster stehen).

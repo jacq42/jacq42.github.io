@@ -70,14 +70,15 @@ Controller: bauen auf Basisobjekten, überwachen den Cluster Zustand und versuch
 * [Helm](https://helm.sh/) Charts: Packagemanager für Kubernetes
 * [k3sup](https://github.com/alexellis/k3sup) (gesprochen Ketchup): Kann auf Remoteservern k3s Server und Agent installieren (über ssh)
 
-### K3s installieren 
+### K3s installieren (und Demo deployen)
 
 1. K3s installieren: `curl -sfL https://get.k3s.io | sh -`
 2. Prüfen: `sudo k3s kubectl get nodes`
-3. deployment.yaml erstellen: TBD
+3. [deployment.yml](/assets/data/deployment.yml) erstellen
 4. Starten: `sudo k3s kubectl apply -f deployment.yml`
 5. Pods anschauen: `sudo k3s kubectl get pods`
 6. ifconfig IP herausfinden -> im Browser aufrufen -> sollte Startseite für nginx anzeigen
+7. stoppen: `sudo k3s kubectl delete -f deployment.yml`
 
 [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) stellt HTTP und HTTPS Routen von außerhalb des Clusters in den Cluster zur Verfügung
 
@@ -90,18 +91,29 @@ Raft-Consensus Protocol: Bei 3 Nodes kann 1 Node wegbrechen und das Cluster ist 
 1. arkade installieren: `curl -sLS https://dl.get-arkade.dev | sudo sh`
 2. k3sup installieren: `arkade get k3sup` und dann `sudo mv /home/<username>/.arkade/bin/k3sup /usr/local/bin` (wird nach dem Download angezeigt)
 3. VMs erstellen und SSH Schlüssel hinterlegen
+	* curl muss installiert sein
+	* Portweiterleitung funktioniert nicht: `ssh -p 2222 user@127.0.0.1` um auf VM mit Port 22 zuzugreifen
+	* Besser als 2. Netzwerkadapter Host-only setzen
 4. Auf dem 1. Node ein Server installieren: `k3sup install --ip IP-ADRESS-SERVER --user root --cluster`
-    * --cluster -> etcd anstatt SQLite
-5. Cluster testen: siehe den Infos bei der Installation
+	* "--cluster" -> etcd anstatt SQLite
+	* Fehlermeldung: _sudo: ein Terminal ist erforderlich, um das Passwort zu lesen; verwenden Sie entweder die Option -S zum Lesen von der Standardeingabe oder konfigurieren Sie einen Askpass-Helfer_
+		* in der VM unter `/etc/sudoers.d/` eine neue Datei mit dem Username
+		* Inhalt: `myuser ALL = (ALL) NOPASSWD: ALL`
+		* Rechte ändern: chmod 0440 /etc/sudoers.d/myuser
+5. Cluster testen: siehe den letzten Infos bei der Installation
     ``` 
-    export KUBECONFIG ..
+    export KUBECONFIG=/home/<user>/.ssh/kubeconfig
     kubectl config set-context default
     kubectl get node -o wide
     ```
-6. Mehrer Masterserver: `k3sup join --ip IP-ADRESS-NEU --user root --server-user root --server-ip IP-ADRESS-SERVER --server`
-    * geht auf Server
-    * lädt k3s runter
-    * startet k3s
+    * Ausgabe listet den neu erstellten Master auf:
+    ```
+    kubectl get node -o wide
+	NAME                STATUS     ROLES         AGE   VERSION         INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION     CONTAINER-RUNTIME
+	ubuntu-virtualbox   NotReady   etcd,master   7s    v1.19.11+k3s1   10.0.2.15     <none>        Ubuntu 20.04.2 LTS   5.8.0-55-generic   containerd://1.4.4-k3s1
+    ```
+6. Weiteren Server zum Cluster hinzufügen: `k3sup join --ip IP-ADRESS-NEU --user root --server-user root --server-ip IP-ADRESS-SERVER --server`
+	* endete bisher nur in der Fehlermeldung _Error: unable to setup agent: Process exited with status 1_
 7. Nodes testen: `kubectl get nodes`
 8. Noch einen Server hinzufügen: wie 6. nur andere IP
 9. Noch einen Server hinzufügen: wie 6. nur andere IP
