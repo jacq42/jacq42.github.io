@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Kubernetes
+title:  "Einführung in Kubernetes"
 tags: [ Java, Container, Kubernetes ]
 author: jacq42
 excerpt_separator: <!--more-->
@@ -10,6 +10,8 @@ excerpt_separator: <!--more-->
 Was sind die Konzepte? Wie wende ich es an?
 
 <!--more-->
+
+Dies ist nur als erster Einstieg zu sehen. An dieser Stelle soll nicht Kubernetes erklärt werden. Dazu gibt es die [Doku](https://kubernetes.io/de/docs/home/).
 
 Kubernetes ist eine Plattform zur Verwaltung von containerisierten Anwendungen (z.B. Docker). Kubernetes erleichtert die Konfiguration und die Automatisierung. Ist ein Open-Source-Projekt von Google (seit 2014 entwickelt).\
 Unterstützt mehrere Container Laufzeiten: Docker, containerd, cri-o, rklet, ..
@@ -51,10 +53,34 @@ Controller: bauen auf Basisobjekten, überwachen den Cluster Zustand und versuch
 
 **Fazit:** Kubernetes besteht aus verschiedenen Komponenten, die miteinander zusammenspielen, die austauschbar sind (Docker oder containerd) und die skaliert werden können. Dadurch ist Kubernetes extrem flexibel aber auch komplex. Um diese Komplexität auf dem Entwicklerrechner zu umgehen, kann K3s genutzt werden.
 
-## Praktische Anwendung
+## Erste praktische Anwendung
 
 * Definition des Status in einer yaml Konfigurationsdatei
 * Ausführen mit `kubectl apply -f myservice.yml`
+* Die Konfigurationsdatei kann man sich auch erstellen lassen: `sudo k3s kubectl run nginx --image=nginx --restart=Never --port=80 --dry-run=client -o yaml > pod.yml`
+	* Es wird ein Datei pod.yml erstellt, in der es einen nginx Service gibt, der auf Port 80 erreichbar ist
+	* Nach Ausführen mit `sudo k3s kubectl apply -f pod.yml` erscheint "pod/nginx created"
+
+pod.yml:	
+```yml
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: nginx
+  name: nginx
+spec:
+  containers:
+  - image: nginx
+    name: nginx
+    ports:
+    - containerPort: 80
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}
+```
 
 ## K3s
 
@@ -64,7 +90,7 @@ Controller: bauen auf Basisobjekten, überwachen den Cluster Zustand und versuch
 * kann auch auf Raspi ausgeführt werden
 * einfache Defaults sind bereits gesetzt
 
-## Demo
+## K3s im Einsatz: Demoanwendung
 
 * [arkade](https://github.com/alexellis/arkade): Marketplace, um Helm Charts zu installieren
 * [Helm](https://helm.sh/) Charts: Packagemanager für Kubernetes
@@ -114,12 +140,17 @@ Raft-Consensus Protocol: Bei 3 Nodes kann 1 Node wegbrechen und das Cluster ist 
     ```
 6. Weiteren Server zum Cluster hinzufügen: `k3sup join --ip IP-ADRESS-NEU --user root --server-user root --server-ip IP-ADRESS-SERVER --server`
 	* endete bisher nur in der Fehlermeldung _Error: unable to setup agent: Process exited with status 1_
+	* Problem liegt wohl an der Konfiguration der VMs
 7. Nodes testen: `kubectl get nodes`
 8. Noch einen Server hinzufügen: wie 6. nur andere IP
-9. Noch einen Server hinzufügen: wie 6. nur andere IP
-10. TBD (min. 36 des SK Videos)
+9. TBD: Server abreißen und schauen, ob es noch läuft bzw. wieder aufgebaut wird (ab Min. 36 im SK Video)
 
 ## Links
 
 * [Grundlagen lernen](https://kubernetes.io/de/docs/tutorials/kubernetes-basics/)
-* [Vortrag in der Softwerkskammer](https://www.youtube.com/watch?v=545w9d_Kb5U)
+* [Video vom Vortrag in der Softwerkskammer](https://www.youtube.com/watch?v=545w9d_Kb5U)
+
+## Wie weiter?
+
+* [Certified Kubernetes Application Developer Certificate](https://www.cncf.io/certification/ckad/)
+* Vorbereitung auf CKAD auf [freecodecamp](https://www.freecodecamp.org/news/how-to-become-a-certified-kubernetes-application-developer/)
