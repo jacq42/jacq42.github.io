@@ -1,0 +1,35 @@
+ContextMap ContextMapper {
+	contains SharedKernel1, SharedKernel2, UpstreamContext, Supplier, Conformist, YASupplier, PartnerA, PartnerB
+
+	SharedKernel1 [SK]<->[SK] SharedKernel2
+
+	UpstreamContext [U, S]->[D, C] Supplier
+
+	UpstreamContext [U, OHS, PL]->[D, ACL] YASupplier {
+		implementationTechnology = "REST"
+	}
+
+	UpstreamContext [U, OHS, PL]->[D, CF] Conformist {
+		implementationTechnology = "SOAP"
+	}
+	
+	PartnerA [P]<->[P] PartnerB
+}
+
+BoundedContext SharedKernel1
+
+BoundedContext SharedKernel2
+
+BoundedContext UpstreamContext
+
+BoundedContext Supplier
+
+BoundedContext Conformist
+
+BoundedContext EventPublisher
+
+BoundedContext YASupplier
+
+BoundedContext PartnerA
+
+BoundedContext PartnerB
