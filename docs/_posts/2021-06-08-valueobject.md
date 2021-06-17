@@ -4,12 +4,14 @@ title:  Value Object
 tags: [ DDD, Java, CleanCode ]
 author: jacq42
 excerpt_separator: <!--more-->
-#color: rgb(0, 100,100)
+color: rgb(50, 70,100)
 ---
 
 Was sind die Vorteile? Gibt es Nachteile?
 
 <!--more-->
+
+Ein ValueObject ist allein durch seine Attribute definiert und nicht durch eine ID. Ein ValueObject ist immer immutable. Andere Werte = anderes Objekt.
 
 ## Der Code wird lesbarer
 
