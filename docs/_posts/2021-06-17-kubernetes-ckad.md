@@ -47,3 +47,15 @@ Zum Erstellen von virtuellen Clustern innerhalb des physischen Clusters.\
 Erstellen: `kubectl create namespace my-namespace`
 Auflisten: `kubectl get namespaces`
 Löschen: `kubectl delete namespace my-namespace`
+
+### Resource Quotas
+
+Damit lassen sich die Ressourcen, die ein Entwickler in einem Namespace erstellen kann beschränken. Ressourcen sind sowohl physikalische Ressourcen als auch Kubernetes Objekte wie Pods. Die Beschränkungen lassen sich entweder in einer yaml Datei definieren und dann mit `apply` zuweisen oder man sie auch direkt über `kubectl create quota my-quota --hard="secrets=2"` setzen (In diesem Fall kann der User auf diesem Cluster nur 2 Secrets erstellen).
+
+### Labels
+
+Mit Labels lassen sich Ressourcen innerhalb des Clusters organisieren. Ein Label ist ein Key-Value-Pair. Die Zuweisung des Labels erfolgt entweder bei Erstellung der Ressource oder kann auch später hinzugefügt werden. Labels können auch wieder entfernt werden. Über Lables können Ressourcen ausgewählt werden.
+
+### Annotations
+
+Bestehen ähnlich wie Lables aus Key-Value-Paaren. Darüber lassen sich jedoch keine Ressourcen auswählen. Über Annotationen lassen sich Informationen für andere Tools hinzufügen wie z.B. über welchen Port Prometheus die Metriken einsammeln soll.
