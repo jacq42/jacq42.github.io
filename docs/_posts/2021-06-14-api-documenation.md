@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "API Dokumentation"
-tags: [ Java, API ]
+tags: [ Java, Gradle, API, Documentation ]
 author: jacq42
 excerpt_separator: <!--more-->
 #color: rgb(0, 100,100)

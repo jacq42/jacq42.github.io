@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  SonarQube
-tags: [ Java, Testing, Quality, CleanCode ]
+tags: [ Gradle, Testing, CodeQuality, CleanCode ]
 author: jacq42
 excerpt_separator: <!--more-->
 #color: rgb(0, 100,100)
@@ -47,30 +47,27 @@ Dann sollte die [grafische Oberfläche](http://localhost:9000/) erreichbar sein.
 
 Konfiguration im Gradle Projekt:
 ```
-apply plugin: 'org.sonarqube'
-
-buildscript {
-  repositories {
-    maven {
-      url "https://plugins.gradle.org/m2/"
-    }
-  }
-  dependencies {
-    classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.6.2"
-  }
+plugins {
+	id 'org.sonarqube' version '3.0'
 }
 
 sonarqube {
-  // Starten mit gradle sonarqube -Dsonar.jdbc.url=jdbc:postgresql://localhost:5432/sonar -Dsonar.verbose=true
   properties {
     property "sonar.projectName", "Projektname"
-    property "sonar.projectKey", "Key anhand Packagestruktur?"
-    property "sonar.jacoco.reportPath", "${project.buildDir}/jacoco/test.exec"
+    property "sonar.projectKey", "Im Server konfigurierter Key"
+    property "sonar.host.url", "http://localhost:9000"
   }
 }
+
+tasks['sonarqube'].dependsOn test
 ```
 
-Analyse starten: `gradle sonarqube -Dsonar.jdbc.url=jdbc:postgresql://localhost:5432/sonar -Dsonar.verbose=true`
+Analyse starten: `gradle sonarqube -Dsonar.login=<token>`\
+Das Token muss über die UI erstellt werden.
+
+#### Plugin in der IDE integrieren
+
+In Eclipse oder STS über den Marketplace das [Plugin](https://marketplace.eclipse.org/content/sonarlint) installieren. Nach dem Neustart der IDE gibt es einen neuen Eintrag im Kontextmenü **Sonarlint**. Unter **Bind to SonarQube or SonarCloud** kann man den lokalen Server verbinden. Dann kann man mit **Analyze** die Analyse innerhalb der IDE starten. Bei Codeänderungen wird die Analyse automatisch ausgeführt. In den Klassen sieht man die Codesmells oder Bugs als unterstrichene Linien.
 
 ## Konfiguration auf dem Server
 
@@ -78,8 +75,12 @@ Man sollte zusammen mit allen Entwicklern einmal über die [Rules](https://docs.
 
 Um die Codequalität dauerhaft sicherzustellen, sollte der Server so konfiguriert werden, dass der Build bei einer zu schlechten Qualität bzw. einer zu hohen Anzahl von Bugs und Technical Depts den Build fehlschlagen lässt. Dafür lassen sich [Quality Gates](https://docs.sonarqube.org/latest/user-guide/quality-gates/) definieren.
 
-
 ## Gamification
 
 Um die Jagd nach Bugs ein wenig spielerischer zu betreiben, gibt es [SonarQuest](https://www.viadee.de/sonarquest). Ich habe es noch nicht testen können, klingt aber vielversprechend.
+
+## Rules ausschließen
+
+Sollen innerhalb eines Projektes oder einer Klasse Rules ausgeschlossen werden, kann dies mit `@SuppressWarning("java:S1135")` an der Klasse/Methode geschehen.\
+Zum Ausschluss gibt es auch die Möglichkeit über eine 'sonar-project.properties' oder über die Konfiguration im Server. 
 
