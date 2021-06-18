@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  SonarQube
-tags: [ Java, Testing, Quality, CleanCode ]
+tags: [ Java, Testing, Quality, CleanCode, Tools ]
 author: jacq42
 excerpt_separator: <!--more-->
 #color: rgb(0, 100,100)
