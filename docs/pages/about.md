@@ -33,4 +33,7 @@ In unsortierter Reihenfolge:
 * doctoolchain
 * Monitoring: Kibana, Grafana, Prometheus
 * KI
+* Anschauen:
+    * [Splunk](https://www.splunk.com/de_de)
+    * [ArgoCD](https://argoproj.github.io/argo-cd/)
 * ...
