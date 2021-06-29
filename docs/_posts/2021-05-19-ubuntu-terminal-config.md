@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Terminal in Ubuntu konfigurieren
-tags: [ ubuntu, IDE ]
+tags: [ Ubuntu, IDE ]
 author: jacq42
 excerpt_separator: <!--more-->
 ---
