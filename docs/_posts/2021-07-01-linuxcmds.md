@@ -38,3 +38,9 @@ Umwandlung der Zertifikate:
 sudo openssl x509 -inform PEM -in certificate.cer -out certificate.pem
 sudo openssl x509 -inform PEM -in certificate.cer -out certificate.crt
 ```
+
+Import eines Zertifikates in Firefox:
+Einstellungen > Datenschutz und Sicherheit > Zertifikate > Zertifikate anzeigen > Ihre Zertifikate > Importieren
+
+Import eines Zertifikates in Chrome:
+Einstellungen > Datenschutz und Sicherheit > Sicherheit > Zertifikate verwalten > Meine Zertifikate > Importieren
