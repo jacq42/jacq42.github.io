@@ -24,3 +24,17 @@ adduser <name> sudo
 adduser <name>
 sudo usermod -aG sudo <name>
 ```
+
+Zertifikate importieren:
+```
+sudo mv *.crt /usr/local/share/ca-certificates
+sudo update-ca-certificates
+
+ls /etc/ssl/certs
+```
+
+Umwandlung der Zertifikate:
+```
+sudo openssl x509 -inform PEM -in certificate.cer -out certificate.pem
+sudo openssl x509 -inform PEM -in certificate.cer -out certificate.crt
+```
