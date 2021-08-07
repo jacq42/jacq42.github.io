@@ -3,9 +3,13 @@ layout: post
 title:  "Git: Global .gitignore"
 tags: [ git, dev ]
 author: jacq42
-#excerpt_separator: <!--more-->
+excerpt_separator: <!--more-->
 color: rgb(200, 110, 80)
 ---
+
+Einstellungen global anstatt in jedem Projekt vornehmen.
+
+<!--more-->
 
 ## Global .gitignore erstellen
 
