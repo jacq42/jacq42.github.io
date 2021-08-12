@@ -7,7 +7,7 @@ excerpt_separator: <!--more-->
 #color: rgb(0, 100,100)
 ---
 
-Enums als QueryParam
+Bei Verwendung von Enums als QueryParam
 
 <!--more-->
 
