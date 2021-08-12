@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Installation von Jekyll
-tags: [ jekyll ]
+tags: [ jekyll, Tools ]
 author: jacq42
 ---
 
