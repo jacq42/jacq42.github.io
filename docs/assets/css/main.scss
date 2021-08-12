@@ -1,0 +1,14 @@
+---
+---
+
+@import "type-on-strap";
+
+h1 {
+  font-size: 2.0em;  
+}
+
+.site-footer, .comments, article, .feature-image .post-content, .feature-image footer, .posts .post-teaser { padding: 2% 23%; }
+@media (max-width: 2000px) { .site-footer, .comments, article, .feature-image .post-content, .feature-image footer, .posts .post-teaser { padding: 2% 18%; } }
+@media (max-width: 1400px) { .site-footer, .comments, article, .feature-image .post-content, .feature-image footer, .posts .post-teaser { padding: 2% 9%; } }
+@media (max-width: 1000px) { .site-footer, .comments, article, .feature-image .post-content, .feature-image footer, .posts .post-teaser { padding: 2% 6%; } }
+@media (max-width: 576px) { .site-footer, .comments, article, .feature-image .post-content, .feature-image footer, .posts .post-teaser { padding: 2% 4%; } }
