@@ -4,7 +4,7 @@ title:  Domain Storytelling
 tags: [ DDD ]
 author: jacq42
 excerpt_separator: <!--more-->
-#color: rgb(0, 100,100)
+color: rgb(50, 70,100)
 ---
 
 Was ist das? Brauche ich das?
