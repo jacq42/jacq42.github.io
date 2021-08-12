@@ -24,32 +24,32 @@ Tool zum digitalen Erstellen: [Context Mapper](https://contextmapper.org/)
 
 ![ContextMap Examples](/assets/img/jk/Examples_ContextMap.svg)
 
-* Big Ball Of Mud
+* **Big Ball Of Mud**
 * In-Beetween Patterns:
-	* Partnership (P)
-	* Shared Kernel (SK)
+	* **Partnership** (P)
+	* **Shared Kernel** (SK)
 		* Modell/Code/DB wird geteilt
 		* kann nur geändert werden, wenn beide Teams zustimmen
-	* Published Language (PL)
+	* **Published Language** (PL)
 		* Austausch des Modells über eine definierte Spracht (WSDL)
 		* wird oft zusammen mit dem Open Host Service verwendet
-	* Separate Ways (SW)
+	* **Separate Ways** (SW)
 		* es bestehen keine Beziehungen zwischen den Kontexten
 		* in der Übersicht nur markieren, wenn keine Beziehungen bestehen sollen (sonst wird es zu unübersichtlich)
 * Upstream Patterns:
-	* Open Host Service (OHS)
+	* **Open Host Service** (OHS)
 		* Definition eines Protokolls, um anderen Systemen den Zugriff zu ermöglichen (REST, Soap)
-	* Event Publisher (EP)
+	* **Event Publisher** (EP)
 		* Publizierung eines Events (z.B. über Kafka)
     	* wer das Event nutzt, ist nicht bekannt
 * Downstream Patterns:
-	* Customer/Supplier (CS)
+	* **Customer/Supplier** (CS)
 		* Downstream kann mitbestimmen, ob eine Änderung gemacht werden soll
 		* Beispiel: APIs innerhalb einer Firma
-	* Conformist (CF)
+	* **Conformist** (CF)
 		* Downstream kann nicht mitbestimmen und muss auf Änderungen reagieren
 		* Beispiel: öffentliche APIs wie z.B. von Facebook
-	* Anticorruption Layer (ACL)
+	* **Anticorruption Layer** (ACL)
 		* Tanslationlayer, um die Abhängigkeit zum Upstream Team zu minimieren
 		* übersetzt das Modell des Upstream Teams in das eigene Modell
 		* kann beidseitig sein

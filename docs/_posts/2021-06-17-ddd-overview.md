@@ -54,6 +54,7 @@ Jeder Kontext hat seine eigene Uqiquitous Language. Da ein Begriff in unterschie
 
 ## Literatur
 
-* [Blue Book von Eric Evans](https://www.domainlanguage.com/ddd/blue-book/)
+* [Blue Book von Eric Evans](https://www.domainlanguage.com/ddd/blue-book/){:target='blank'}
+* [DDD Reference](https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf){:target='blank'}
 * [DDD Referenz DE](https://ddd-referenz.de/){:target='blank'}
 * [DDD Referenz EN](https://www.domainlanguage.com/ddd/reference/){:target='blank'}
