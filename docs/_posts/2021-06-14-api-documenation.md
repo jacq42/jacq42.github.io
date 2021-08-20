@@ -4,6 +4,7 @@ title:  "API Dokumentation"
 tags: [ Java, Gradle, API, Documentation ]
 author: jacq42
 excerpt_separator: <!--more-->
+lastupdate: 2021-08-20
 #color: rgb(0, 100,100)
 ---
 
