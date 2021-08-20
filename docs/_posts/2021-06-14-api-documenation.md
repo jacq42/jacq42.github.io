@@ -12,7 +12,7 @@ Wie erstellt man auf einfachem Wege eine Doku der API?
 
 <!--more-->
 
-<p><b>Updated:</b>{% lastupdate }</p>
+<p><b>Updated:</b>{{ lastupdate }}</p>
  
 Dokumenation mit [OpenApi](https://www.openapis.org/)
 
