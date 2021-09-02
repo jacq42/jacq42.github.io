@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Bean Validation"
-tags: [ Java, CleanCode, Validierung ]
+tags: [ Java, CleanCode, Validierung, Testing ]
 author: jacq42
 excerpt_separator: <!--more-->
 #color: rgb(0, 100,100)
@@ -82,7 +82,7 @@ public class ZuValidierendeKlasse {
 ..
 }
 ```
-Über die Annotation @Target lässt sich konfigurieren, an welchen Stellen die Annotation verwendet werden darf: Klasse, Feld, Parameter etc.
+Über die Annotation `@Target` lässt sich konfigurieren, an welchen Stellen die Annotation verwendet werden darf: Klasse, Feld, Parameter etc.
 
 Der Validator sieht dann wie folgt aus:
 ```java
@@ -115,7 +115,7 @@ public class CustomValidator implements ConstraintValidator<ValidCustom, BeanKla
 
 ## UnitTest
 
-Testen lässt es sich in einem JUnit Test genau wie die Implementierung des Validierungsservice:
+Testen lässt es sich in einem JUnit Test genau wie die Implementierung des Validierungsservice. Zum Beispiel, dass keine Fehler auftreten:
 ```java
 Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
 
@@ -125,7 +125,7 @@ Set<ConstraintViolation<T>> violations = validator.validate(zuValidierendesObjek
 assertTrue(violations.isEmpty());
 ```
 
-Man kann auch durch alle Violations iterieren und nach einer bestimmten Violation anhand des PropertyPath oder der Message suchen.
+Um zu testen, dass ein Fehler angezeigt wird, kann man durch alle Violations iterieren und nach einer bestimmten Violation anhand des PropertyPath oder der Message suchen. 
 
 ## Komplexere Validierungen
 
