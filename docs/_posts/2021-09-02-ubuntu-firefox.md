@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Firefox Performance
+title:  "Ubuntu: Firefox Performance"
 tags: [ Ubuntu, Firefox ]
 author: jacq42
 excerpt_separator: <!--more-->
