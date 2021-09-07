@@ -7,7 +7,6 @@ excerpt_separator: <!--more-->
 lastupdate: 2021-08-20
 #color: rgb(0, 100,100)
 ---
-<p><i><b>Updated:</b> {{ page.lastupdate }}</i></p>
 
 Wie erstellt man auf einfachem Wege eine Doku der API?
 

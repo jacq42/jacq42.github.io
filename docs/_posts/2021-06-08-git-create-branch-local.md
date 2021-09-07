@@ -8,8 +8,6 @@ lastupdate: 2021-08-30
 color: rgb(200, 110, 80)
 ---
 
-<p><i><b>Updated:</b> {{ page.lastupdate }}</i></p>
-
 ## Einen neuen Branch lokal erstellen und nach remote pushen
 
 Branch lokal erstellen:\
