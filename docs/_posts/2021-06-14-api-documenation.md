@@ -4,6 +4,7 @@ title:  "API Dokumentation"
 tags: [ Java, Gradle, API, Documentation ]
 author: jacq42
 excerpt_separator: <!--more-->
+lastupdate: 2021-08-20
 #color: rgb(0, 100,100)
 ---
 
@@ -26,7 +27,7 @@ Beteiligte:
 ### Gradle 
 
 ```groovy
-	// Springfox Swagger
+    // Springfox Swagger
     compile "io.springfox:springfox-swagger2:${springFoxVersion}"
     compile "io.springfox:springfox-spring-web:${springFoxVersion}"
     compile "io.springfox:springfox-core:${springFoxVersion}"
@@ -90,10 +91,6 @@ springfox.documentation.swagger.v2.path=/api/v1/api-docs
 
 ### Annotation an den Controllern
 
-* @Api describes the whole controller
-* @ApiOperation is used for description on a methods level
-* @ApiParam is used for method parameters
-
 Der gesamte Controller kann konfiguriert werden mit:
 ```java
 @Api("Beschreibung des Controllers")
@@ -106,6 +103,15 @@ Parallel zum @RequestParam kann ein @ApiParam gesetzt werden:
 ```java
 @ApiParam(name = "plattform", required = true, allowableValues = "android,ios")
 ```
+Ein Model kann konfiguriert werden mit:
+```java
+@ApiModel
+```
+Innerhalb des Modells kann ein Feld parallel zu @JsonProperty konfiguriert werden mit:
+```java
+@ApiModelProperty(required = true, value = "Beschreibung", example = "gültiger Wert")
+```
+Sollte es sich bei dem Feld um ein Array oder eine Liste handeln, kann das example nicht korrekt angegeben werden. Siehe auch im entsprechenden [Github Issue](https://github.com/swagger-api/swagger-core/issues/1855).
 
 ## Editor
 

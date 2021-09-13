@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "LCS: Linux Command Suite"
-tags: [ Ubuntu, dev ]
+tags: [ Ubuntu, dev, Firefox ]
 author: jacq42
 excerpt_separator: <!--more-->
 #color: rgb(0, 100,100)
