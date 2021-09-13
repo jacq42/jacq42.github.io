@@ -45,6 +45,9 @@ nativeTest {
 
 `./gradlew bootbuildImage`
 
+Im src/main/resources Ordner ein META-INF/native-images Verzeichnis erstellen. Dort eine [native-images.properties](https://www.graalvm.org/reference-manual/native-image/BuildConfiguration/#embedding-a-configuration-file) Datei erstellen und folgende Optionen angeben:
+siehe JavaPro Artikel
+
 ## Mögliche Fehlermeldungen
 
 1. No access hint found
