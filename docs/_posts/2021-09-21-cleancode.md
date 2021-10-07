@@ -14,6 +14,8 @@ Small things matter
 
 ## Warum braucht man guten Code?
 
+_"Any fool can write code that a computer can understand. Good programmers write code that humans can understand." (Martin Fowler)_
+
 Code wird öfter gelesen als geschrieben. Oft liest man Code, den man nicht selbst geschrieben hat.
 
 Je später man einen Bug findet, desto teurer ist er.
@@ -34,6 +36,16 @@ Code sollte:
 * gut wartbar sein
 * modular aufgebaut sein
 * einfach testbar sein
+
+## Clean tests
+
+* show intent
+	* how to use the code
+	* what is expected when it's used in a scenario
+* focused
+	* 1 assert
+* do exactly what they say: naming the test
+* abstract implementation details		
 
 ## Clean Code Developer
 
