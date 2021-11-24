@@ -7,11 +7,13 @@ excerpt_separator: <!--more-->
 #color: rgb(0, 100,100)
 ---
 
-The propper way
+The proper way
 
 <!--more-->
 
-Die gewünschte Version auswählen: https://gradle.org/releases/
+Die gewünschte Version auswählen: [Gradle Releases](https://gradle.org/releases/).
+
+Im Projekt ausführen:
 
 ```
 ./gradlew wrapper --gradle-version <Versionsnummer> --distribution-type bin
