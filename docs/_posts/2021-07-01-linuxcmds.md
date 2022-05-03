@@ -4,6 +4,7 @@ title:  "LCS: Linux Command Suite"
 tags: [ Ubuntu, dev, Firefox ]
 author: jacq42
 excerpt_separator: <!--more-->
+lastupdate: 2022-05-03
 #color: rgb(0, 100,100)
 ---
 
@@ -32,6 +33,15 @@ sudo usermod -aG sudo <name>
 ```
 su - <username>
 ```
+
+## apt-get
+
+`sudo apt-show-versions <name>` Anzeige der Version eines installierten Programms (apt-show-versions muss evtl. noch installiert werden)
+
+`apt-cache policy <name>` Zeigt eine Liste, welche Version installiert ist und welche remote vorhanden sind
+
+`apt-get -V -s upgrade` Simulation, was alles aktualisiert werden würde
+
 
 ## Zertifikate importieren:
 
