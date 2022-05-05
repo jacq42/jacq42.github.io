@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "GitHub: Dependabot konfigurieren"
-tags: [ git, GitHub, dev, Quality, Tools ]
+tags: [ GitHub, dev, Quality, Tools ]
 author: jacq42
 #excerpt_separator: <!--more-->
 color: rgb(200, 110, 80)
