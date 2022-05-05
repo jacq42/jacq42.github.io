@@ -7,11 +7,12 @@ author: jacq42
 color: rgb(200, 110, 80)
 ---
 
+Sharing files between jobs and workspaces
 
 <!--more-->
 
 Um Daten zwischen verschiedenen Jobs zu teilen, gibt es in GitHub Actions zwei Möglichkeiten:
-* Artefakte
+* [Artefakte]({% post_url 2022-05-05-github-action-artifacts %})
 * Caching
 
 Artefakte werden verwendet, um Dateien zu speichern, auf die nach dem Build noch zugegriffen werden soll: Test Reports, Security Reports o.ä.

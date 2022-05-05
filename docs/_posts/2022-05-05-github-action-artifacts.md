@@ -7,12 +7,13 @@ author: jacq42
 color: rgb(200, 110, 80)
 ---
 
+Upload and download of artifacts
 
 <!--more-->
 
 Um Daten zwischen verschiedenen Jobs zu teilen, gibt es in GitHub Actions zwei Möglichkeiten:
-* [Artefakte]()
-* [Caching]({% post_url 2021-06-24-sonargraph %})
+* Artefakte
+* [Caching]({% post_url 2022-05-05-github-action-cache %})
 
 Caching wird verwendet, wenn Dateien zwischen einzelnen Jobs ausgetauscht werden sollen. Zum Beispiel können erstellte Artefakte in einem späteren Job für das Deployment verwendet werden.
 
