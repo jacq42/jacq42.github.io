@@ -3,7 +3,7 @@ layout: post
 title:  "GitHub Action: cache"
 tags: [ GitHub, dev ]
 author: jacq42
-#excerpt_separator: <!--more-->
+excerpt_separator: <!--more-->
 color: rgb(200, 110, 80)
 ---
 
@@ -23,6 +23,7 @@ Weitere Informationen mit Beispielen gibt es im dazugehörigen [GitHub Projekt](
 
 ## Beispiel
 
+{% raw %}
 ```
 jobs:
   first-job:
@@ -54,5 +55,5 @@ jobs:
             src/main/resources/
           key: cachekey-${{ github.sha }}
 ```
-
+{% endraw %}
 

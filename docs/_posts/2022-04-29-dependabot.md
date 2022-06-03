@@ -3,7 +3,7 @@ layout: post
 title:  "GitHub: Dependabot konfigurieren"
 tags: [ GitHub, dev, Quality, Tools ]
 author: jacq42
-#excerpt_separator: <!--more-->
+excerpt_separator: <!--more-->
 color: rgb(200, 110, 80)
 ---
 
@@ -41,6 +41,7 @@ Dependabot schaut nach aktualisierten Versionen und tauscht diese aus. Es wird e
 
 Die Pull Requests können entweder manuell oder automatisch gemerged werden. Wenn dies automatisch geschehen soll, dann unter `/.github/workflows` eine Datei `dependabot-automerge.yml` erstellen mit folgendem Inhalt:
 
+{% raw %}
 ```
 name: Dependabot auto merge
 
@@ -83,5 +84,6 @@ jobs:
           PR_URL: ${{github.event.pull_request.html_url}}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
+{% endraw %}
 
 Damit werden Minor Updates in den Versionen automatisch in den Code übernommen, wenn der Build erfolgreich durchlaufen wird. Major Updates müssen weiterhin manuell gemerged werden. So wird sichergestellt, dass Major Updates keine Breaking Changes mitbringen.
