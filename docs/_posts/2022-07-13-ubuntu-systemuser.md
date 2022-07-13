@@ -20,6 +20,7 @@ Ein vorhandener User sollte nicht im Login Screen angezeigt werden.
 Den User als Systemuser konfigurieren:
 
 * Eine Datei anlegen oder die vorhandene Datei öffnen und Änderungen unter User vornehmen
+
 ```
 /var/lib/AccountsService/users/XXX
 
