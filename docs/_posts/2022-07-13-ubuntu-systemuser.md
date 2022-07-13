@@ -1,24 +1,31 @@
 ---
 layout: post
-title:  "mob.sh"
-tags: [ dev ]
+title:  "Ubuntu: User Login"
+tags: [ Ubuntu ]
 author: jacq42
 excerpt_separator: <!--more-->
 color: rgb(200, 110, 80)
 ---
 
-(Easy) collaborating together
+Hide user from login screen
 
 <!--more-->
 
-Bei der [Pair-/Mob-Programmierung](https://martinfowler.com/articles/on-pair-programming.html) sitzen 2++ Entwickler*innen zusammen an einem Arbeitsplatz und arbeiten gemeinsam an der Lösung des Problems. 
+## Problem
 
-Wenn alle physisch an einem Ort ("Vor-Ort") arbeiten, arbeitet man zusammen an einem Rechner. Möchte man remote zusammen arbeiten, kann man [mob.sh](https://mob.sh/) nutzen, um zusammen in einem Branch zu arbeiten. Mit einfachen Shellbefehlen, lassen sich Codeänderungen schnell austauschen:
-* `mob start` bzw. `mob start -b name` aktualisiert den Branch (bzw. erstellt einen neuen ausgehend vom aktuellen Branch)
-* `mob next` sendet die Codeänderungen
-* `mob done` beendet den Branch (lokal und remote) und squashed alle Änderungen in den Ursprungsbranch
+Ein vorhandener User sollte nicht im Login Screen angezeigt werden.
 
-Auf der Webseite gibt es ein ausführlicheres Beispiel dafür.
+## Lösung
+
+Den User als Systemuser konfigurieren:
+
+* Eine Datei anlegen oder die vorhandene Datei öffnen und Änderungen unter User vornehmen
+```
+/var/lib/AccountsService/users/XXX
+
+[User]
+SystemAccount=true
+```
 
 
 
