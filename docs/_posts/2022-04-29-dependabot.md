@@ -31,6 +31,22 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+
+  - package-ecosystem: "npm"
+    directory: "/app/"
+    schedule:
+      interval: "daily"
+      time : "05:00"
+      timezone : "Europe/Berlin"
+
+  - package-ecosystem: "bundler"
+    directory: "/"
+    allow:
+      - dependency-type: "all"
+    schedule:
+      interval: "daily"
+      time: "05:00"
+      timezone: "Europe/Berlin"
 ```
 
 Im angegebenen Beispiel werden alle GitHub Actions (in den Workflow Dateien) und die Dependencies in der `build.gradle` einmal wöchentlich aktualisiert.
