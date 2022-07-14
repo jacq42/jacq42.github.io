@@ -35,10 +35,15 @@ updates:
 
 Im angegebenen Beispiel werden alle GitHub Actions (in den Workflow Dateien) und die Dependencies in der `build.gradle` einmal wöchentlich aktualisiert.
 
-Es gibt vielfältige Möglichkeiten der [Konfiguration](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/configuration-options-for-dependency-updates) werden.
+Es gibt vielfältige Möglichkeiten der [Konfiguration](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/configuration-options-for-dependency-updates).
+Über das `package-ecosystem` wird angegeben, in welchen Dateien nach Versionen geschaut werden soll:
+* github-actions -> .workflow/*.yml
+* gradle -> build.gradle
+* npm -> package.json und Lock files
+* bundler -> Gemfile und Lock files
+Mit `directory` wird angegeben, in welchem Verzeichnis sich die Configdateien befinden. Befindet sich die package.json z.B. in einem Unterverzeichnis __app__, dann hier `/app/` angeben.
 
-Dependabot schaut nach aktualisierten Versionen und tauscht diese aus. Es wird ein Pull Request mit den Änderungen erstellt. Vorhandene GitHub Action Workflows werden durchlaufen.
-
+Dependabot schaut nach aktualisierten Versionen erstellt einen Pull Request mit den Änderungen.
 Die Pull Requests können entweder manuell oder automatisch gemerged werden. Wenn dies automatisch geschehen soll, dann unter `/.github/workflows` eine Datei `dependabot-automerge.yml` erstellen mit folgendem Inhalt:
 
 {% raw %}
@@ -64,8 +69,6 @@ jobs:
       - name: Dependabot metadata
         id: metadata
         uses: dependabot/fetch-metadata@v1.3.1
-        with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
 
       - name: Checkout PR Branch
         uses: actions/checkout@v3
@@ -87,3 +90,4 @@ jobs:
 {% endraw %}
 
 Damit werden Minor Updates in den Versionen automatisch in den Code übernommen, wenn der Build erfolgreich durchlaufen wird. Major Updates müssen weiterhin manuell gemerged werden. So wird sichergestellt, dass Major Updates keine Breaking Changes mitbringen.
+Das GitHub Token muss an dieser Stelle angegeben werden, um von einem GitHub Action Workflow die GitHub CLI nutzen zu können
