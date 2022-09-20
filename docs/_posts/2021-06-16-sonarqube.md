@@ -4,7 +4,7 @@ title:  SonarQube
 tags: [ Java, Testing, Quality, CleanCode, Tools ]
 author: jacq42
 excerpt_separator: <!--more-->
-#color: rgb(0, 100,100)
+color: rgb(50, 50, 150)
 ---
 
 Wie lässt sich damit effizient die Qualität verbessern?

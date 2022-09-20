@@ -4,8 +4,29 @@
 @import "type-on-strap";
 
 h1 {
-  font-size: 2.0em;  
+  font-size: 1.7em;  
 }
+
+header h1 {
+  font-size: 1.5em;
+}
+
+.call-out { padding: 0; }
+@media (min-width: 2000px) { .call-out { padding: 0; } }
+@media (max-width: 576px) { .call-out { padding: 0; } }
+
+.posts .excerpt {
+  margin-top: 0.7em;
+}
+
+.post-info p {
+  font-size: 1em;
+}
+
+.feature-image header {
+  padding: 0;
+}
+
 
 .site-footer, .comments, article, .feature-image .post-content, .feature-image footer, .posts .post-teaser { padding: 2% 23%; }
 @media (max-width: 2000px) { .site-footer, .comments, article, .feature-image .post-content, .feature-image footer, .posts .post-teaser { padding: 2% 18%; } }

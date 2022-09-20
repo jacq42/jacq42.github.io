@@ -4,6 +4,7 @@ title:  "Ubuntu: Firefox Performance"
 tags: [ Ubuntu, Firefox ]
 author: jacq42
 excerpt_separator: <!--more-->
+color: rgb(175, 175, 175)
 ---
 
 <!--more-->

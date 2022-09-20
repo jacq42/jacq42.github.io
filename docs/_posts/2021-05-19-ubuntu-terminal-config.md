@@ -4,6 +4,7 @@ title:  Terminal in Ubuntu konfigurieren
 tags: [ Ubuntu, IDE ]
 author: jacq42
 excerpt_separator: <!--more-->
+color: rgb(175, 175, 175)
 ---
 
 Ich arbeite gern mit der [Zsh](https://wiki.ubuntuusers.de/Zsh/) zusammen mit [Oh-My-Zsh](https://ohmyz.sh) und dem [Solarized Farbschema](https://github.com/aruhier/gnome-terminal-colors-solarized).

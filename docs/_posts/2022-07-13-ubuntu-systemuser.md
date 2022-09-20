@@ -4,7 +4,7 @@ title:  "Ubuntu: User Login"
 tags: [ Ubuntu ]
 author: jacq42
 excerpt_separator: <!--more-->
-color: rgb(200, 110, 80)
+color: rgb(175, 175, 175)
 ---
 
 Hide user from login screen

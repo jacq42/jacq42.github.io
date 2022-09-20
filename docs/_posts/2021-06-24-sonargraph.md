@@ -4,7 +4,7 @@ title:  Sonargraph
 tags: [ Quality, Tools ]
 author: jacq42
 excerpt_separator: <!--more-->
-#color: rgb(0, 100,100)
+color: rgb(50, 50, 150)
 ---
 
 <!--more-->

@@ -4,7 +4,7 @@ title:  VirtualBox unter Ubuntu
 tags: [ Ubuntu, VM ]
 author: jacq42
 excerpt_separator: <!--more-->
-#color: rgb(0, 100,100)
+color: rgb(175, 175, 175)
 ---
 Wie erstellt und konfiguriert man VMs unter Linux?
 

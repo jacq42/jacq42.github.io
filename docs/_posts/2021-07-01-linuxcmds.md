@@ -5,7 +5,7 @@ tags: [ Ubuntu, dev, Firefox ]
 author: jacq42
 excerpt_separator: <!--more-->
 lastupdate: 2022-05-03
-#color: rgb(0, 100,100)
+color: rgb(175, 175, 175)
 ---
 
 Sammlung oft benötigter (und wieder vergessener) Linuxcommands
