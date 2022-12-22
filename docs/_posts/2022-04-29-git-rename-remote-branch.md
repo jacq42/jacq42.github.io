@@ -3,7 +3,7 @@ layout: post
 title:  "Git: Rename remote branch"
 tags: [ git, dev, troubleshooting ]
 author: jacq42
-#excerpt_separator: <!--more-->
+excerpt_separator: <!--more-->
 color: rgb(200, 110, 80)
 ---
 
