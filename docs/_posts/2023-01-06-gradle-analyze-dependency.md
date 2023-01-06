@@ -13,9 +13,9 @@ Cleanup your dependencies
 
 Es gibt für Gradle ein [Plugin](https://github.com/gradle-dependency-analyze/gradle-dependency-analyze), welches die eingebundenen Dependencies analysiert.
 
-Um "sauber" zu arbeiten, sollte alle verwendeten Dependencies auch deklariert werden und alle nicht verwendeten Dependencies auch nicht unnötigerweise eingebunden werden.
+Um "sauber" zu arbeiten, sollten alle verwendeten Dependencies auch deklariert werden und alle nicht verwendeten Dependencies nicht unnötigerweise eingebunden werden.
 
-Dafür kann man in der `build.gradle` das Plugin integrieren:
+Dafür muss lediglich in der `build.gradle` das Plugin integrieren werden:
 ```
 plugins {
     id "ca.cutterslade.analyze" version "1.9.0"
@@ -29,8 +29,8 @@ allprojects {
 }
 ```
 
-Die Analyse kann dann mit `./gradlew analyzeDependencies` ausgeführt werden. Der Build schlägt fehl, wenn Dependencies konfiguriert wurden, die nicht verwendet werden oder verwendete (transitive) Dependencies nicht konfiguriert wurden.
-Um bei Verwendung des Plugins in ein bestehendes Projekt nicht Tage mit dem Aufräumen der Dependencies zu verbingen, kann man auch nur eine Warnung ausgeben und den Build nicht fehlschlagen lassen:
+Dann kann auch schon die Analyse mit `./gradlew analyzeDependencies` ausgeführt werden. Beim Verstoß gegen oben genannte Konventionen schlägt der Build fehl.
+Um bei Verwendung des Plugins in ein bestehendes Projekt nicht Stunden bis Tage mit dem Aufräumen der Dependencies zu verbingen, kann man auch nur eine Warnung ausgeben und den Build nicht fehlschlagen lassen. Dann hat man genügend Zeit, einmal feucht durchzuwischen (:sweat_drops:) :
 ```
 tasks.named('analyzeClassesDependencies').configure {
     warnUsedUndeclared = true
