@@ -23,6 +23,11 @@ sie einfach mal testen.
 Für die Installation wird das github Repo lokal geklont (standardmäßig unter ~/.oh-my-zsh).
 Unter den unzähligen [Pugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins) findet sich bestimmt das eine oder andere :-)
 
+## PowerLevel10k
+
+[PowerLevel10k](https://github.com/romkatv/powerlevel10k) ist ein Theme für Zsh. Es bietet unterschiedliche Zusatzinformationen im Terminal an, wie z.B. den Branchnamen und Zustand, wenn es sich um ein GitRepo handelt.
+Für die Installation einfach der Anleitung folgen: Repo nach .oh-my-zsh/custom/themes klonen und ZSH_THEME in ~.zshrc konfigurieren. (Danach mit zsh die Shell neu starten.) Dann kann mit `p10k configure` die Anzeige konfiguriert werden.
+
 ## Solarized
 
 [Solarized](https://github.com/aruhier/gnome-terminal-colors-solarized) ist eine Farbpalette mit 16 Farben für den Gebrauch im Terminal und in GUI Anwendungen. Durch die Verwendung eines einheitlichen Farbschemas erhöht sich die Lesbarkeit.
