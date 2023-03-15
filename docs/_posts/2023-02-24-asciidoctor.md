@@ -20,7 +20,7 @@ Recherche herausfinden muss, ob nun die Doku oder der Code die Wahrheit enthält
 
 ## HowTo
 
-1. Seite(n) anlegen
+### Seite(n) anlegen
 
 Unter `src/docs/asciidoc` eine AsciiDoc Datei `xxx.adoc` erstellen. Diese könnte z.B. so aussehen: [`src/docs/asciidoc/xxx.adoc`]
 ```
@@ -51,7 +51,7 @@ Mit der include Direktive werden weitere Seiten inkludiert. Diese haben einen ä
 Some content
 ```
 
-2. Gradle Plugin konfigurieren
+### Gradle Plugin konfigurieren
 
 Example kotlin.dsl:
 ```
