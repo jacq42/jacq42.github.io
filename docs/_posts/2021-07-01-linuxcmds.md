@@ -44,6 +44,14 @@ su - <username>
 
 `sudo apt-get --only-upgrade install <name>` Aktualisiert nur ein bestimmtest Packet
 
+## Service nach dem Boot starten
+
+`service <servicename> status` zeigt den Status an
+
+`sudo systemctl enable <servicename>` enabled den Start des Service beim Start
+
+`sudo systemctl disable <servicename>` disabled den Start des Service beim Start
+
 
 ## Zertifikate importieren:
 
