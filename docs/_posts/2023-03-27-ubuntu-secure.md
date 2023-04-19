@@ -17,6 +17,7 @@ Als **Virenscanner** gibt es für Ubuntu [ClamAV](https://www.clamav.net/): Folg
 Die verwendeten Datenbanken werden mit freshclam aktualisiert, das ebenfalls als Daemon läuft. In der `/etc/clamav/freshclam.conf` kann man die Einstellungen
 dazu vornehmen. Falls freshclam noch nicht läuft, einmal `freshclam` aufrufen und es sollte fortan als _clamav-freshclam_ Service laufen.
 In den Logs `/var/log/clamav/freshclam.log` sollte je nach Einstellung zu erkennen sein, dass er die Datenbanken aktualisiert. Die Datenbanken selbst liegen unter `/var/lib/clamav`.
+Es kann passieren, dass ein VPN Client (z.B. GlobalProtect) nur auf das Datum der `main.cvd` schaut und die Verbindung wegen veralteter Datenbanken verweigert. Dann kann man die aktuelle DB auch (noch einmal) manuell herunterladen und die vorhandene damit ersetzen: [main.cvd](http://database.clamav.net/main.cvd), [daily.cvd](http://database.clamav.net/daily.cvd), [bytecode.cvd](http://database.clamav.net/bytecode.cvd).
 
 Um **Realtime Scanning** einzurichten, muss die [Config](https://docs.clamav.net/manual/OnAccess.html?highlight=onac#configuration-and-recipes) angepasst werden:
 In der `/etc/clamav/clamav.conf` ergänzen:
