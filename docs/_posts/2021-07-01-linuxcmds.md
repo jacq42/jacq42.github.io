@@ -4,7 +4,7 @@ title:  "LCS: Linux Command Suite"
 tags: [ Ubuntu, dev, Firefox ]
 author: jacq42
 excerpt_separator: <!--more-->
-lastupdate: 2023-01-30
+lastupdate: 2023-09-21
 color: rgb(175, 175, 175)
 ---
 
@@ -43,6 +43,14 @@ su - <username>
 `apt-get -V -s upgrade` Simulation, was alles aktualisiert werden würde
 
 `sudo apt-get --only-upgrade install <name>` Aktualisiert nur ein bestimmtest Packet
+
+## Installation ohne apt-get
+
+`sudo dpkg -i <name>` Installation eines .deb Packages
+
+[SnapStore](https://snapcraft.io/store): Programm auf dem Rechner, mit dem sich Anwendungen installieren lassen -> grafische Oberfläche nutzen
+
+[AppImage](https://appimage.org/) Anwendungen ohne Installation laufen lassen
 
 ## Service nach dem Boot starten
 
