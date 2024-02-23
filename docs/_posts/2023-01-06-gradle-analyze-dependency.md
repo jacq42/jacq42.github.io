@@ -45,7 +45,7 @@ tasks.named('analyzeTestClassesDependencies').configure {
     logDependencyInformationToFiles = true
 }
 ```
-```kotlin.dsl
+```
 tasks.named<AnalyzeDependenciesTask>("analyzeClassesDependencies") {
     warnUsedUndeclared = true
     warnUnusedDeclared = true
