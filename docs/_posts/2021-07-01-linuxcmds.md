@@ -15,8 +15,13 @@ Sammlung oft benötigter (und wieder vergessener) Linuxcommands
 ## Suche in Dateien:
 
 ```
-grep -rnwi /path/ -e "search"
+grep -rnwi  -e "search" -e "anotherSearch" /path/to/directory/
 ```
+* `-r` recursive
+* `-n` output with line number
+* `-w` whole word
+* `-i` ignore case
+* `-e` search pattern (can be used multiple times)
 
 ## Benutzer mit sudo Rechten erstellen:
 
