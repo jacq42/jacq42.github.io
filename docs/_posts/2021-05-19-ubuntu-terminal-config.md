@@ -23,6 +23,8 @@ sie einfach mal testen.
 Für die Installation wird das github Repo lokal geklont (standardmäßig unter ~/.oh-my-zsh).
 Unter den unzähligen [Pugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins) findet sich bestimmt das eine oder andere :-)
 
+Meine aktuellen Lieblinge `plugins=(git asdf aws history docker gradle zsh-autosuggestions)`
+
 ## PowerLevel10k
 
 [PowerLevel10k](https://github.com/romkatv/powerlevel10k) ist ein Theme für Zsh. Es bietet unterschiedliche Zusatzinformationen im Terminal an, wie z.B. den Branchnamen und Zustand, wenn es sich um ein GitRepo handelt.
