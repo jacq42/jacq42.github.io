@@ -16,6 +16,8 @@ Let us assume a project with sveltekit. The sveltekit includes another lib cooki
 cookie lib has a security issue but there is also a fix for that. When the parent package doesn't have a new version with 
 that fix we can override the version of the transitive lib by ourselves.
 
+![image](../assets/img/blog/dependabotSecurityIssue.png)
+
 See following example of a package.json:
 
 ```json
