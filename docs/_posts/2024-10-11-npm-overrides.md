@@ -34,3 +34,5 @@ See following example of a package.json:
 This will override the version of cookie package to at least 0.7.0.
 
 Remember to remove the overrides when the parent lib has been updated.
+
+For more information, see documentation on [npmjs](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#overrides).
