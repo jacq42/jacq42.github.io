@@ -10,7 +10,8 @@ excerpt_separator: <!--more-->
 <!--more-->
 
 > "Branch by Abstraction" is a technique for making a large-scale change to a software system in gradual way that allows you to release the system regularly while the change is still in-progress.
-siehe [bliki](https://martinfowler.com/bliki/BranchByAbstraction.html)
+
+Quelle: [Martin Fowler bliki](https://martinfowler.com/bliki/BranchByAbstraction.html)
 
 ## Problem
 
