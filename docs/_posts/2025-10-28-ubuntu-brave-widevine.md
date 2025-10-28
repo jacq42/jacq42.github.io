@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Ubuntu: DRM videos within brave"
-tags: [ ubuntu, drm, brave ]
+tags: [ Ubuntu, DRM, Brave ]
 author: jacq42
 excerpt_separator: <!--more-->
 color: rgb(175, 175, 175)
