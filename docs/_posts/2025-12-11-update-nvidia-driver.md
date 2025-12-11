@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Ubuntu: Update or install Nvidia driver"
+title:  "Ubuntu: Nvidia driver installation"
 tags: [ Ubuntu, Nvidia ]
 author: jacq42
 excerpt_separator: <!--more-->
