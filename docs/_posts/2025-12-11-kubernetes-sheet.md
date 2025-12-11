@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Kubernetes data sheet"
-tags: [ kubernetes, dev ]
+tags: [ Kubernetes, dev ]
 author: jacq42
 excerpt_separator: <!--more-->
 #color: rgb(175, 175, 175)
