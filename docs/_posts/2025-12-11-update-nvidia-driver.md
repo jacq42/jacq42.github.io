@@ -9,7 +9,7 @@ color: rgb(175, 175, 175)
 
 <!--more-->
 
-Link: https://documentation.ubuntu.com/server/how-to/graphics/install-nvidia-drivers/
+Source: [NVIDIA drivers installation](https://documentation.ubuntu.com/server/how-to/graphics/install-nvidia-drivers/)
 
 Check currently installed driver:
 ```
