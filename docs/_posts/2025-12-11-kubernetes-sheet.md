@@ -19,6 +19,10 @@ Assumption: Use of `k`as alias for `kubectrl`
 - List resources in default namespace: `k get RESOURCE_TYPE` 
 - List resources in specified namespace: `k get RESOURCE_TYPE -n NAMESPACE`
 - List resources in all namespaces: `k get RESOURCE_TYPE -A`
+- List resources by selectors: `k get RESOURCE_TYPE --selector KEY1=VALUE1,KEY2=VALUE2`
+
+- List all resources: `k get all`
+- List all resources in all namespaces: `k get all -A`
 
 - Describe resource `k describe RESOURCE_NAME`
 
@@ -29,6 +33,17 @@ Assumption: Use of `k`as alias for `kubectrl`
 
 - Repace existing resource: `k replace --force -f FILENAME.yaml`
 
+- Update label on a resource: `k label RESOURCE_TYPE RESOURCE_NAME KEY=VALUE`
+
+- Get logs of resource: `k logs RESOURCE_NAME` 
+    - RESOURCE_NAME: POD_NAME or service/SERVICE_NAME
+
+- Display resources usage: `k top RESOURCE_TYPE`
+    - Needs a running metrics server
+    - Run a metrics server: `k apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml`
+
+- Operators: `In`, `NotIn`, `Exists`, `DoesNotExist`
+
 ## Pods
 
 - Create Pod: `k run POD_NAME --image=IMAGE_NAME`
@@ -37,6 +52,10 @@ Assumption: Use of `k`as alias for `kubectrl`
 ## ReplicaSets
 
 - Up/Down-Scale: `k scale --replicas=NEW_NUMBER rs/RS_NAME`
+
+## Deployment
+
+- Create deployment with replicas: `k create deploy DEPLOYMENT_NAME --image=IMAGE_NAME --replicas=NUMBER`
 
 ## Namespaces
 
@@ -52,6 +71,13 @@ Assumption: Use of `k`as alias for `kubectrl`
 - Create: `docker build -t IMAGE_NAME PATH_TO_DOCKERFILE`
 - Run an instance: `docker run -p EXPOSED_PORT:APP_PORT IMAGE_NAME`
 - Run command in instance: `docker run IMAGE_NAME cat /etc/*release*`
+
+## Taints and toleration
+
+- Effects: NoSchedule, NoExecute, PreferNoSchedule
+
+- Create taint on node: `k taint nodes NODE_NAME KEY=VALUE:EFFECT`
+- Delete taint from node: `k taint nodes NODE_NAME KEY-`
 
 ## Links
 
